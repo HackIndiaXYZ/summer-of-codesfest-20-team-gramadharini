@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder – Rural Hub</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">🌱 Rural Hub</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="internships.html">Internships</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="hackathons.html">Hackathons</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>📄 Resume Builder</h1>
+    <p>Fill in your details and download your professional resume</p>
+  </section>
+
+  <!-- Resume Builder Section -->
+  <section class="resume-section">
+
+    <!-- Form Side -->
+    <div class="resume-form">
+      <h2>Your Details</h2>
+
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" id="name" placeholder="e.g. Rahul Patil" oninput="updatePreview()">
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="email" placeholder="e.g. rahul@email.com" oninput="updatePreview()">
+      </div>
+
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="text" id="phone" placeholder="e.g. 9876543210" oninput="updatePreview()">
+      </div>
+
+      <div class="form-group">
+        <label>Location</label>
+        <input type="text" id="location" placeholder="e.g. Nashik, Maharashtra" oninput="updatePreview()">
+      </div>
+
+      <div class="form-group">
+        <label>About Me</label>
+        <textarea id="about" rows="3" placeholder="Write 2-3 lines about yourself..." oninput="updatePreview()"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Education</label>
+        <input type="text" id="education" placeholder="e.g. B.Sc Computer Science, Pune University" oninput="updatePreview()">
+      </div>
+
+      <div class="form-group">
+        <label>Skills (comma separated)</label>
+        <input type="text" id="skills" placeholder="e.g. HTML, CSS, Python, MS Excel" oninput="updatePreview()">
+      </div>
+
+      <div class="form-group">
+        <label>Experience / Projects</label>
+        <textarea id="experience" rows="3" placeholder="e.g. Built a website for local school..." oninput="updatePreview()"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Languages Known</label>
+        <input type="text" id="languages" placeholder="e.g. Marathi, Hindi, English" oninput="updatePreview()">
+      </div>
+
+      <button class="download-btn" onclick="downloadResume()">
+        ⬇️ Download Resume as PDF
+      </button>
+    </div>
+
+    <!-- Preview Side -->
+    <div class="resume-preview" id="resumePreview">
+      <div class="preview-box" id="previewBox">
+
+        <div class="preview-header">
+          <h1 id="prevName">Your Name</h1>
+          <p id="prevContact">email@example.com | 9876543210 | Location</p>
+        </div>
+
+        <div class="preview-section">
+          <h3>About Me</h3>
+          <p id="prevAbout">Your summary will appear here...</p>
+        </div>
+
+        <div class="preview-section">
+          <h3>Education</h3>
+          <p id="prevEducation">Your education will appear here...</p>
+        </div>
+
+        <div class="preview-section">
+          <h3>Skills</h3>
+          <div id="prevSkills" class="skills-list"></div>
+        </div>
+
+        <div class="preview-section">
+          <h3>Experience / Projects</h3>
+          <p id="prevExperience">Your experience will appear here...</p>
+        </div>
+
+        <div class="preview-section">
+          <h3>Languages</h3>
+          <p id="prevLanguages">Your languages will appear here...</p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Rural Opportunity Hub — Made for students, by students.</p>
+  </footer>
+
+  <script>
+    function updatePreview() {
+      document.getElementById('prevName').innerText = document.getElementById('name').value || 'Your Name';
+      document.getElementById('prevContact').innerText =
+        (document.getElementById('email').value || 'email@example.com') + ' | ' +
+        (document.getElementById('phone').value || '9876543210') + ' | ' +
+        (document.getElementById('location').value || 'Location');
+      document.getElementById('prevAbout').innerText = document.getElementById('about').value || 'Your summary will appear here...';
+      document.getElementById('prevEducation').innerText = document.getElementById('education').value || 'Your education will appear here...';
+      document.getElementById('prevExperience').innerText = document.getElementById('experience').value || 'Your experience will appear here...';
+      document.getElementById('prevLanguages').innerText = document.getElementById('languages').value || 'Your languages will appear here...';
+
+      // Skills as badges
+      const skills = document.getElementById('skills').value.split(',').filter(s => s.trim());
+      const skillsDiv = document.getElementById('prevSkills');
+      skillsDiv.innerHTML = skills.map(s => `<span class="skill-badge">${s.trim()}</span>`).join('');
+    }
+
+    function downloadResume() {
+      window.print();
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Courses – Rural Hub</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">🌱 Rural Hub</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="internships.html">Internships</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="hackathons.html">Hackathons</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>📚 Free Courses</h1>
+    <p>Learn new skills completely free from top platforms</p>
+  </section>
+
+  <!-- Filter Buttons -->
+  <section class="filter-bar">
+    <button class="filter-btn active" onclick="filterCourses('all')">All</button>
+    <button class="filter-btn" onclick="filterCourses('webdev')">Web Dev</button>
+    <button class="filter-btn" onclick="filterCourses('data')">Data Science</button>
+    <button class="filter-btn" onclick="filterCourses('agriculture')">Agriculture</button>
+    <button class="filter-btn" onclick="filterCourses('english')">English</button>
+    <button class="filter-btn" onclick="filterCourses('business')">Business</button>
+  </section>
+
+  <!-- Course Cards -->
+  <section class="course-list">
+
+    <div class="course-card" data-category="webdev">
+      <div class="course-icon">💻</div>
+      <span class="course-tag">Web Dev</span>
+      <h3>HTML & CSS Full Course</h3>
+      <p>Platform: YouTube – freeCodeCamp</p>
+      <p>Duration: 6 hours &nbsp;|&nbsp; Free</p>
+      <a href="https://www.youtube.com/watch?v=mU6anWqZJcc" target="_blank" class="course-btn">Start Learning</a>
+    </div>
+
+    <div class="course-card" data-category="webdev">
+      <div class="course-icon">🐍</div>
+      <span class="course-tag">Web Dev</span>
+      <h3>Python for Beginners</h3>
+      <p>Platform: YouTube – Programming with Mosh</p>
+      <p>Duration: 6 hours &nbsp;|&nbsp; Free</p>
+      <a href="https://www.youtube.com/watch?v=_uQrJ0TkZlc" target="_blank" class="course-btn">Start Learning</a>
+    </div>
+
+    <div class="course-card" data-category="data">
+      <div class="course-icon">📊</div>
+      <span class="course-tag">Data Science</span>
+      <h3>Data Science with Python</h3>
+      <p>Platform: NPTEL – IIT Madras</p>
+      <p>Duration: 12 weeks &nbsp;|&nbsp; Free</p>
+      <a href="https://nptel.ac.in" target="_blank" class="course-btn">Start Learning</a>
+    </div>
+
+    <div class="course-card" data-category="data">
+      <div class="course-icon">🤖</div>
+      <span class="course-tag">Data Science</span>
+      <h3>Machine Learning Basics</h3>
+      <p>Platform: Google – ML Crash Course</p>
+      <p>Duration: 15 hours &nbsp;|&nbsp; Free</p>
+      <a href="https://developers.google.com/machine-learning/crash-course" target="_blank" class="course-btn">Start Learning</a>
+    </div>
+
+    <div class="course-card" data-category="agriculture">
+      <div class="course-icon">🌾</div>
+      <span class="course-tag">Agriculture</span>
+      <h3>Modern Farming Techniques</h3>
+      <p>Platform: NPTEL – IIT Kharagpur</p>
+      <p>Duration: 8 weeks &nbsp;|&nbsp; Free</p>
+      <a href="https://nptel.ac.in" target="_blank" class="course-btn">Start Learning</a>
+    </div>
+
+    <div class="course-card" data-category="agriculture">
+      <div class="course-icon">💧</div>
+      <span class="course-tag">Agriculture</span>
+      <h3>Irrigation & Water Management</h3>
+      <p>Platform: YouTube – ICAR</p>
+      <p>Duration: 4 hours &nbsp;|&nbsp; Free</p>
+      <a href="https://www.youtube.com/@ICARofficial" target="_blank" class="course-btn">Start Learning</a>
+    </div>
+
+    <div class="course-card" data-category="english">
+      <div class="course-icon">🗣️</div>
+      <span class="course-tag">English</span>
+      <h3>Spoken English for Beginners</h3>
+      <p>Platform: YouTube – Learnex</p>
+      <p>Duration: Self-paced &nbsp;|&nbsp; Free</p>
+      <a href="https://www.youtube.com/@Learnexenglish" target="_blank" class="course-btn">Start Learning</a>
+    </div>
+
+    <div class="course-card" data-category="business">
+      <div class="course-icon">💼</div>
+      <span class="course-tag">Business</span>
+      <h3>Entrepreneurship & Startups</h3>
+      <p>Platform: Coursera – Wharton School</p>
+      <p>Duration: 4 weeks &nbsp;|&nbsp; Free Audit</p>
+      <a href="https://www.coursera.org" target="_blank" class="course-btn">Start Learning</a>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Rural Opportunity Hub — Made for students, by students.</p>
+  </footer>
+
+  <script>
+    function filterCourses(category) {
+      // Update active button
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      // Show/hide cards
+      document.querySelectorAll('.course-card').forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
