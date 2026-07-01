@@ -3,31 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hackathons – Rural Hub</title>
+  <title>Hackathons – GramaDharini</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
   <nav>
-    <div class="logo">🌱 Rural Hub</div>
+    <div class="logo">🌱 GramaDharini</div>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="internships.html">Internships</a></li>
       <li><a href="courses.html">Courses</a></li>
       <li><a href="resume.html">Resume</a></li>
       <li><a href="hackathons.html">Hackathons</a></li>
-      <li><a href="login.html">Login</a></li>
+      <li id="loginLink"><a href="login.html">Login</a></li>
     </ul>
   </nav>
 
-  <!-- Page Header -->
   <section class="page-header">
     <h1>🏆 Hackathons & Competitions</h1>
     <p>Compete, win prizes and build your portfolio</p>
   </section>
 
-  <!-- Filter Buttons -->
   <section class="filter-bar">
     <button class="filter-btn active" onclick="filterEvents('all', event)">All</button>
     <button class="filter-btn" onclick="filterEvents('hackathon', event)">Hackathons</button>
@@ -36,9 +33,7 @@
     <button class="filter-btn" onclick="filterEvents('business', event)">Business</button>
   </section>
 
-  <!-- Event Cards -->
   <section class="event-list">
-
     <div class="event-card" data-category="hackathon">
       <div class="event-header hackathon-color">
         <span class="event-type">Hackathon</span>
@@ -53,7 +48,6 @@
         <a href="https://www.sih.gov.in" target="_blank" class="event-btn">Register Now</a>
       </div>
     </div>
-
     <div class="event-card" data-category="hackathon">
       <div class="event-header hackathon-color">
         <span class="event-type">Hackathon</span>
@@ -68,7 +62,6 @@
         <a href="https://www.infosys.com" target="_blank" class="event-btn">Register Now</a>
       </div>
     </div>
-
     <div class="event-card" data-category="quiz">
       <div class="event-header quiz-color">
         <span class="event-type">Quiz</span>
@@ -83,7 +76,6 @@
         <a href="https://www.csir.res.in" target="_blank" class="event-btn">Register Now</a>
       </div>
     </div>
-
     <div class="event-card" data-category="design">
       <div class="event-header design-color">
         <span class="event-type">Design</span>
@@ -98,7 +90,6 @@
         <a href="https://www.adobe.com" target="_blank" class="event-btn">Register Now</a>
       </div>
     </div>
-
     <div class="event-card" data-category="business">
       <div class="event-header business-color">
         <span class="event-type">Business</span>
@@ -113,7 +104,6 @@
         <a href="https://www.ecell.in" target="_blank" class="event-btn">Register Now</a>
       </div>
     </div>
-
     <div class="event-card" data-category="hackathon">
       <div class="event-header hackathon-color">
         <span class="event-type">Hackathon</span>
@@ -128,12 +118,10 @@
         <a href="https://developers.google.com" target="_blank" class="event-btn">Register Now</a>
       </div>
     </div>
-
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2025 Rural Opportunity Hub — Made for students, by students.</p>
+    <p>© 2025 GramaDharini – ग्रामधारिणी | Empowering Rural Students</p>
   </footer>
 
   <script>
@@ -149,6 +137,6 @@
       });
     }
   </script>
-
+  <script type="module" src="js/js/app.js"></script>
 </body>
 </html>
