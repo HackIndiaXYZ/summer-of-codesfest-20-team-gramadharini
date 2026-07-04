@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GramaDharini – ग्रामधारिणी</title>
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Baloo+2:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
+  <!-- ── NAVBAR ── -->
   <nav>
     <div class="logo">🌱 GramaDharini</div>
     <ul>
@@ -21,45 +23,208 @@
     </ul>
   </nav>
 
+  <!-- ── HERO ── -->
   <section class="hero">
-    <h1>GramaDharini – ग्रामधारिणी</h1>
-    <p>Empowering rural students with internships, free courses, resume builder and more.</p>
-    <button onclick="window.location.href='internships.html'">Explore Internships</button>
+    <div class="hero-content">
+      <div class="hero-badge-top">🌾 Made for Rural Students of India</div>
+      <h1>Welcome to <span>GramaDharini</span></h1>
+      <h2 class="hero-hindi">ग्रामधारिणी</h2>
+      <p>A free platform empowering rural students with internships, resume tools, free courses, and hackathon opportunities — all in one place.</p>
+      <div class="hero-btns">
+        <button onclick="window.location.href='internships.html'" class="btn-primary">💼 Find Internships</button>
+        <button onclick="window.location.href='about.html'" class="btn-secondary">Learn More</button>
+      </div>
+      <div class="hero-badges">
+        <span class="hero-badge">✅ 100% Free</span>
+        <span class="hero-badge">🌍 Pan India</span>
+        <span class="hero-badge">🎓 For Students</span>
+        <span class="hero-badge">📱 Mobile Friendly</span>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="hero-card-float">
+        <div class="float-card fc1">
+          <span>💼</span>
+          <p>500+ Internships</p>
+        </div>
+        <div class="float-card fc2">
+          <span>📚</span>
+          <p>50+ Free Courses</p>
+        </div>
+        <div class="float-card fc3">
+          <span>🏆</span>
+          <p>100+ Hackathons</p>
+        </div>
+        <div class="float-card fc4">
+          <span>👩‍🎓</span>
+          <p>10K+ Students</p>
+        </div>
+        <div class="hero-circle">
+          <p class="hero-circle-text">ग्रामधारिणी</p>
+          <p class="hero-circle-sub">Empowering Rural India</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="features">
-    <a href="internships.html" class="card-link">
-      <div class="card">
-        <div class="icon">💼</div>
+  <!-- ── INTRODUCTION ── -->
+  <section class="intro-section">
+    <div class="intro-left">
+      <div class="intro-tag">🌱 About GramaDharini</div>
+      <h2>What is GramaDharini?</h2>
+      <p>GramaDharini (ग्रामधारिणी) means <strong>"one who supports the village"</strong>. We are a free platform built specially for students from rural areas of India.</p>
+      <p>Many talented students in villages and small towns don't have access to the right opportunities. GramaDharini bridges that gap by bringing internships, free courses, resume tools, and competitions — all in one free platform.</p>
+      <p>Whether you are from a small village in Maharashtra, Rajasthan, or any other state — <strong>GramaDharini is for YOU.</strong></p>
+      <div class="intro-points">
+        <div class="intro-point">✅ Find internships from top companies</div>
+        <div class="intro-point">✅ Build a professional resume for free</div>
+        <div class="intro-point">✅ Access free courses from IIT, Google & more</div>
+        <div class="intro-point">✅ Participate in hackathons & win prizes</div>
+      </div>
+    </div>
+    <div class="intro-right">
+      <div class="intro-visual">
+        <div class="visual-circle vc1">💼<br><small>Internships</small></div>
+        <div class="visual-circle vc2">📄<br><small>Resume</small></div>
+        <div class="visual-circle vc3">📚<br><small>Courses</small></div>
+        <div class="visual-circle vc4">🏆<br><small>Hackathons</small></div>
+        <div class="visual-center">🌱<br><small>GramaDharini</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURES ── -->
+  <section class="features-section">
+    <div class="section-header">
+      <div class="section-tag">🚀 Our Features</div>
+      <h2>Everything You Need to Grow</h2>
+      <p>All tools and resources a rural student needs — completely free</p>
+    </div>
+    <div class="features-grid">
+      <a href="internships.html" class="feature-card">
+        <div class="feature-icon" style="background: linear-gradient(135deg, #1B9E6E, #00C9A7);">💼</div>
         <h3>Internships</h3>
-        <p>Find real internships from companies across India.</p>
-      </div>
-    </a>
-    <a href="resume.html" class="card-link">
-      <div class="card">
-        <div class="icon">📄</div>
+        <p>Browse hundreds of internships from top companies across India. Remote and offline options available.</p>
+        <div class="feature-link">Explore → </div>
+      </a>
+      <a href="resume.html" class="feature-card">
+        <div class="feature-icon" style="background: linear-gradient(135deg, #F4A825, #FF6B6B);">📄</div>
         <h3>Resume Builder</h3>
-        <p>Build a professional resume and download it as PDF.</p>
-      </div>
-    </a>
-    <a href="courses.html" class="card-link">
-      <div class="card">
-        <div class="icon">📚</div>
+        <p>Build a professional resume in minutes. Fill your details, preview live, and download as PDF — free!</p>
+        <div class="feature-link">Build Resume → </div>
+      </a>
+      <a href="courses.html" class="feature-card">
+        <div class="feature-icon" style="background: linear-gradient(135deg, #2F80ED, #7B4FBF);">📚</div>
         <h3>Free Courses</h3>
-        <p>Access top free courses from YouTube, NPTEL and more.</p>
-      </div>
-    </a>
-    <a href="hackathons.html" class="card-link">
-      <div class="card">
-        <div class="icon">🏆</div>
+        <p>Access top free courses from YouTube, NPTEL, Google, and Coursera to build real skills.</p>
+        <div class="feature-link">Start Learning → </div>
+      </a>
+      <a href="hackathons.html" class="feature-card">
+        <div class="feature-icon" style="background: linear-gradient(135deg, #7B4FBF, #FF6B6B);">🏆</div>
         <h3>Hackathons</h3>
-        <p>Participate in competitions and win prizes.</p>
-      </div>
-    </a>
+        <p>Stay updated on upcoming hackathons, competitions, and events where you can win prizes.</p>
+        <div class="feature-link">View Events → </div>
+      </a>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2025 GramaDharini – ग्रामधारिणी | Empowering Rural Students</p>
+  <!-- ── STATS ── -->
+  <section class="stats-section">
+    <div class="stats-content">
+      <div class="stats-left">
+        <h2>Making a Difference for Rural Students</h2>
+        <p>GramaDharini is growing every day — helping more students from villages and small towns find their path to success.</p>
+        <button onclick="window.location.href='about.html'" class="btn-gold">Our Story →</button>
+      </div>
+      <div class="stats-right">
+        <div class="stat-item">
+          <h3>500+</h3>
+          <p>Internships Listed</p>
+        </div>
+        <div class="stat-item">
+          <h3>50+</h3>
+          <p>Free Courses</p>
+        </div>
+        <div class="stat-item">
+          <h3>100+</h3>
+          <p>Hackathons & Events</p>
+        </div>
+        <div class="stat-item">
+          <h3>10,000+</h3>
+          <p>Students Helped</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS ── -->
+  <section class="how-section">
+    <div class="section-header">
+      <div class="section-tag">📋 How It Works</div>
+      <h2>Get Started in 3 Easy Steps</h2>
+      <p>Join GramaDharini and start your journey today</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <div class="step-icon">📝</div>
+        <h3>Create Account</h3>
+        <p>Sign up for free with your email. No fees, no hidden charges — completely free forever.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <div class="step-icon">🔍</div>
+        <h3>Explore Opportunities</h3>
+        <p>Browse internships, courses, hackathons, and build your resume — all in one place.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <div class="step-icon">🚀</div>
+        <h3>Grow Your Career</h3>
+        <p>Apply for internships, complete courses, win competitions, and build your future!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Ready to Start Your Journey? 🚀</h2>
+      <p>Join thousands of rural students who are already using GramaDharini to build their careers.</p>
+      <div class="cta-btns">
+        <button onclick="window.location.href='login.html'" class="btn-primary">Get Started Free</button>
+        <button onclick="window.location.href='internships.html'" class="btn-outline">Browse Internships</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">🌱 GramaDharini</div>
+        <p>ग्रामधारिणी — Empowering rural students across India with free opportunities and tools.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="internships.html">Internships</a>
+        <a href="courses.html">Free Courses</a>
+        <a href="resume.html">Resume Builder</a>
+        <a href="hackathons.html">Hackathons</a>
+        <a href="about.html">About Us</a>
+      </div>
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <a href="mailto:mousmijoshi71@gmail.com">📧 Email Us</a>
+        <a href="https://github.com/mousmijoshi" target="_blank">💻 GitHub</a>
+        <a href="login.html">🔐 Login / Register</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 GramaDharini – ग्रामधारिणी | Made with ❤️ for Rural Students of India</p>
+    </div>
   </footer>
 
   <script type="module" src="js/js/app.js"></script>
