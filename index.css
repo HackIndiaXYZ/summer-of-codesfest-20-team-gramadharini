@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bebas Neue", sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-blueprint: #0B1F33;
+  --color-panel: #0F2A45;
+  --color-panel-light: #15385C;
+  --color-ink: #EDEDE3;
+  --color-muted: #8CA0B3;
+  --color-cyan: #3FD0C9;
+  --color-amber: #F2A93B;
+  --color-stamp-red: #D6524A;
+  --color-stamp-green: #4CAF6D;
+  --color-line: rgba(63, 208, 201, 0.16);
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-blueprint);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  background-image:
+    linear-gradient(var(--color-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-line) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-position: -1px -1px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.03em;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* ---- Work-order ticket tag: punch hole + torn perforation edge ---- */
+.ticket-tag {
+  position: relative;
+  background: var(--color-panel);
+  border: 1px solid rgba(140, 160, 179, 0.25);
+}
+
+.ticket-tag::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: -9px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-blueprint);
+  border: 1px solid rgba(140, 160, 179, 0.25);
+}
+
+.ticket-tag .tear-line {
+  border-left: 2px dashed rgba(140, 160, 179, 0.35);
+}
+
+/* ---- Rubber stamp overlay ---- */
+.stamp {
+  position: absolute;
+  border: 3px solid currentColor;
+  border-radius: 8px;
+  padding: 2px 10px;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  transform: rotate(-11deg);
+  opacity: 0.9;
+  mix-blend-mode: screen;
+}
+
+/* ---- Blueprint schematic connector for status pipeline ---- */
+.schematic-line {
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--color-cyan) 0px,
+    var(--color-cyan) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  height: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-panel-light);
+  border-radius: 4px;
+}
